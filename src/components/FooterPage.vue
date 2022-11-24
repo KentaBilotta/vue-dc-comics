@@ -38,6 +38,10 @@ footer{
     border: 2px solid $main-blue;
     width: fit-content;
     cursor: pointer;
+    &:hover{
+      background-color: $main-blue;
+      color: black;
+    }
   }
 
   .socials{

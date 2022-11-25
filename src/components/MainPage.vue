@@ -1,26 +1,11 @@
 <template>
   <main>
+    <div class="jumbo"></div>
     <div class="content"> --> Content Goes Here</div>
     <nav>
-      <div>
-        <img src="@/img/buy-comics-digital-comics.png" alt="">
-        <div>digital comics</div>
-      </div>
-      <div>
-        <img src="@/img/buy-comics-merchandise.png" alt="">
-        <div>dc merchandise</div>
-      </div>
-      <div>
-        <img src="@/img/buy-comics-subscriptions.png" alt="">
-        <div>subscription</div>
-      </div>
-      <div>
-        <img src="@/img/buy-comics-shop-locator.png" alt="">
-        <div>comic shop locator</div>
-      </div>
-      <div>
-        <img src="@/img/buy-dc-power-visa.svg" alt="">
-        <div>dc power visa</div>
+      <div v-for="element in buyComicsArray" :key="element.text">
+        <img :src="element.img" alt="icon">
+        <div>{{ element.text }}</div>
       </div>
     </nav>
     <section>
@@ -71,6 +56,32 @@
 <script>
 export default {
   name: 'MainPage',
+  data() {
+    return {
+      buyComicsArray: [
+        {
+          img: '@/img/buy-comics-digital-comics.png',
+          text: 'digital comics',
+        },
+        {
+          img: '@/img/buy-comics-merchandise.png',
+          text: 'dc merchandise',
+        },
+        {
+          img: '@/img/buy-comics-subscriptions.png',
+          text: 'subscription',
+        },
+        {
+          img: '@/img/buy-comics-shop-locator.png',
+          text: 'comic shop locator',
+        },
+        {
+          img: '@/img/buy-dc-power-visa.svg',
+          text: 'dc power visa',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -79,6 +90,13 @@ export default {
 
   main{
     color: white;
+
+    .jumbo{
+      height: 40vh;
+      background-image: url("../img/jumbotron.jpg");
+      background-size: cover;
+      background-position: top center;
+    }
     .content{
       background-color: black;
       font-size: 2rem;

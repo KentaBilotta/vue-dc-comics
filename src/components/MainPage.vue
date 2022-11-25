@@ -54,29 +54,35 @@
 </template>
 
 <script>
+import digitalImg from '@/img/buy-comics-digital-comics.png';
+import merchandiseImg from '@/img/buy-comics-merchandise.png';
+import subImg from '@/img/buy-comics-subscriptions.png';
+import shopImg from '@/img/buy-comics-shop-locator.png';
+import visaImg from '@/img/buy-dc-power-visa.svg';
+
 export default {
   name: 'MainPage',
   data() {
     return {
       buyComicsArray: [
         {
-          img: '@/img/buy-comics-digital-comics.png',
+          img: digitalImg,
           text: 'digital comics',
         },
         {
-          img: '@/img/buy-comics-merchandise.png',
+          img: merchandiseImg,
           text: 'dc merchandise',
         },
         {
-          img: '@/img/buy-comics-subscriptions.png',
+          img: subImg,
           text: 'subscription',
         },
         {
-          img: '@/img/buy-comics-shop-locator.png',
+          img: shopImg,
           text: 'comic shop locator',
         },
         {
-          img: '@/img/buy-dc-power-visa.svg',
+          img: visaImg,
           text: 'dc power visa',
         },
       ],
@@ -117,7 +123,7 @@ export default {
         display: flex;
         align-items: center;
         img{
-          width: 50px;
+          width: 80px;
           padding: 1rem;
         }
       }
